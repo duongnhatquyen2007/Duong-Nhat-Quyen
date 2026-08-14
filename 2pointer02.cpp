@@ -9,11 +9,13 @@ int main () {
     for (i=0; i<n; i++) {
         cin >> a[i];
     }
+    sort(a,a+n);
     i=0; 
-    int j=a[n-1];
+    int j=n-1;
     while (i < j) {
         if (a[i] + a[j] == x) {
             cout << "POSSIBLE" << endl;
+            return 0;
         }
         if (a[i] + a[j] < x) {
             i+=1;
